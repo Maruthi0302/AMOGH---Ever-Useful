@@ -51,11 +51,11 @@ export const WhatWeProvide = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50/20 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[80vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white animate-pulse">
-            <Sparkles className="w-3 h-3 mr-1" />
+            <Sparkles className="w-12 h-14 mr-1" />
             What We Provide
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">

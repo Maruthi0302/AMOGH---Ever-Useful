@@ -10,8 +10,9 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-purple-200/50 bg-white/95 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="container h-16 w-full flex items-center justify-between">
+        {/* Logo */}
+        <div className="w-30 flex items-left space-x-2">
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg group-hover:scale-110 transition-all duration-300 shadow-md">
               <Sparkles className="w-5 h-5 text-white" />
@@ -22,55 +23,59 @@ export const Header = () => {
               </span>
               <span className="text-xs text-slate-500 -mt-1">ever useful</span>
             </div>
-            <Badge variant="secondary" className="hidden sm:inline-flex animate-pulse bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 border-purple-200">Beta</Badge>
+            <Badge variant="secondary" className="hidden w-10 h-6 text-sm px-1 sm:inline-flex animate-pulse bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 border-purple-200">Beta</Badge>
           </Link>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/marketplace" className="text-slate-600 hover:text-blue-500 transition-colors font-medium hover:scale-105 transform duration-200">
-              Market
-            </Link>
-            <Link to="/freelancing" className="text-slate-600 hover:text-purple-500 transition-colors font-medium hover:scale-105 transform duration-200">
-              Work
-            </Link>
-            <Link to="/sustainable" className="text-slate-600 hover:text-emerald-500 transition-colors font-medium hover:scale-105 transform duration-200">
-              Green
-            </Link>
-            <Link to="/community" className="text-slate-600 hover:text-cyan-500 transition-colors font-medium hover:scale-105 transform duration-200">
-              Connect
-            </Link>
-          </nav>
-
-          <div className="hidden md:flex items-center space-x-3">
-            <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
-              <Link to="/cart">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Cart
-              </Link>
-            </Button>
-            <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
-              <Link to="/signin">Sign In</Link>
-            </Button>
-            <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
-              <Link to="/profile">
-                <User className="w-4 h-4 mr-2" />
-                Profile
-              </Link>
-            </Button>
-            <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
-              <Link to="/admin">Admin</Link>
-            </Button>
-            <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-white" asChild>
-              <Link to="/signup">Join</Link>
-            </Button>
-          </div>
-
-          <button
-            className="md:hidden transform transition-all duration-300 hover:scale-110 text-slate-600"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
+
+        {/* Centered Navigation */}
+        <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <Link to="/" className="text-slate-600 hover:text-blue-500 transition-colors font-medium hover:scale-105 transform duration-200">
+            Market
+          </Link>
+          <Link to="/" className="text-slate-600 hover:text-purple-500 transition-colors font-medium hover:scale-105 transform duration-200">
+            Work
+          </Link>
+          <Link to="/" className="text-slate-600 hover:text-emerald-500 transition-colors font-medium hover:scale-105 transform duration-200">
+            Green
+          </Link>
+          <Link to="/" className="text-slate-600 hover:text-cyan-500 transition-colors font-medium hover:scale-105 transform duration-200">
+            Connect
+          </Link>
+        </nav>
+
+        {/* Right-aligned Buttons */}
+        <div className="hidden w-30 md:flex items-right space-x-3">
+          <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/cart">
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Cart
+            </Link>
+          </Button>
+          <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/signin">Sign In</Link>
+          </Button>
+          <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/profile">
+              <User className="w-4 h-4 mr-2" />
+              Profile
+            </Link>
+          </Button>
+          <Button variant="ghost" className="text-slate-600 hover:text-slate-800 hover:bg-slate-100 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/admin">Admin</Link>
+          </Button>
+          <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-white" asChild>
+            <Link to="/signup">Join</Link>
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden transform transition-all duration-300 hover:scale-110 text-slate-600"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
 
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-200 animate-fade-in">

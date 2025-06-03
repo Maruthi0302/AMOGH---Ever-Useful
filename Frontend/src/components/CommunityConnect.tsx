@@ -33,11 +33,11 @@ export const CommunityConnect = () => {
   ];
 
   return (
-    <section id="community" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="community" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[80vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white animate-pulse">
-            <Heart className="w-3 h-3 mr-1" />
+            <Heart className="w-12 h-14 mr-1" />
             Community Connect
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
@@ -55,7 +55,7 @@ export const CommunityConnect = () => {
           {communityFeatures.map((feature, index) => (
             <Card 
               key={index} 
-              className="text-center group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-scale-in shadow-lg"
+              className="text-center group max-w-[15vw] hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-scale-in shadow-lg"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <CardContent className="p-8">

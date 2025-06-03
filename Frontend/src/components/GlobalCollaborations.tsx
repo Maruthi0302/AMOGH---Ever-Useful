@@ -83,10 +83,10 @@ export const GlobalCollaborations = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full animate-bounce" style={{animationDuration: '3s'}} />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative max-w-[80vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-green-600 text-white animate-pulse">
-            <Globe className="w-3 h-3 mr-1" />
+            <Globe className="w-12 h-14 mr-1" />
             Global Network
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">

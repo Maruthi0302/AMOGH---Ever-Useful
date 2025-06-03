@@ -37,11 +37,11 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20 bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30  relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[80vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white animate-pulse">
-            <CheckCircle className="w-3 h-3 mr-1" />
+            <CheckCircle className="w-12 h-14 mr-1" />
             How It Works
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -59,16 +59,16 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <Card 
-                className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-scale-in h-full"
+                className="group hover:shadow-2xl rounded-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-scale-in h-full"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <CardContent className="p-8 text-center">
                   <div className="relative mb-6">
+                    <div className="absolute -top-2 -left-2 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                      {step.number}
+                    </div>
                     <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
                       <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-xs font-bold">
-                      {step.number}
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
@@ -79,8 +79,8 @@ export const HowItWorks = () => {
               </Card>
               
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                  <ArrowRight className="w-8 h-8 text-gray-300" />
+                <div className="hidden lg:block absolute top-1/2 -right-8 transform -translate-y-1/2 z-10">
+                  <ArrowRight className="w-8 h-8 text-gray-600" />
                 </div>
               )}
             </div>

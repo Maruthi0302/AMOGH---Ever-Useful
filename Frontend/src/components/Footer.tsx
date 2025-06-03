@@ -5,7 +5,7 @@ import { Rocket, Mail, Phone, MapPin, Twitter, Linkedin, Github, Instagram } fro
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-slate-100 to-gray-200 text-slate-700">
+    <footer className="bg-gradient-to-br from-slate-200 to-gray-300 text-slate-900 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
