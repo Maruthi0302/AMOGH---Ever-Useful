@@ -48,7 +48,7 @@ export const TrustedByLeaders = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-100/30 to-purple-100/20 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping" />
@@ -56,10 +56,10 @@ export const TrustedByLeaders = () => {
         <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative max-w-[80vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white animate-pulse">
-            <Crown className="w-3 h-3 mr-1" />
+            <Crown className="w-12 h-14 mr-1" />
             Trusted by Leaders
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">

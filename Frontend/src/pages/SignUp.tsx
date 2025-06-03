@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { Link } from "react-router-dom";
-import { Eye, EyeOff, ArrowRight, Rocket, Star, Users, BookOpen, Building2, Check, Github, Linkedin, Shield, Smartphone, Mail, Phone } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, Sparkles, Star, Users, BookOpen, Building2, Check, Github, Linkedin, Shield, Smartphone, Mail, Phone } from "lucide-react";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -100,26 +100,33 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen g-gradient-to-br from-indigo-200 to-purple-200 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Enhanced animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -left-4 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-20 -right-4 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse delay-500"></div>
-        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-cyan-400 to-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-2000"></div>
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute -z-10 top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-float"></div>
+        <div className="absolute -z-10 top-40 right-20 w-24 h-24 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full animate-pulse-slow"></div>
+        <div className="absolute -z-10 bottom-20 left-1/4 w-40 h-40 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 right-10 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-bounce"></div>
+        <div className="absolute -z-10 bottom-40 right-1/3 w-28 h-28 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="w-full max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-8 animate-fade-in">
-          <Link to="/" className="inline-flex items-center space-x-3 mb-8 group">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl group-hover:scale-110 transition-all duration-500 shadow-lg">
-              <Rocket className="w-7 h-7 text-white" />
-            </div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              ProjectBridge
-            </span>
-          </Link>
+          <div className="w-30 flex items-left space-x-2">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg group-hover:scale-110 transition-all duration-300 shadow-md">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
+                  AMOGH
+                </span>
+                <span className="text-xs text-slate-500 -mt-1">ever useful</span>
+              </div>
+              <Badge variant="secondary" className="hidden w-10 h-6 text-sm px-1 sm:inline-flex animate-pulse bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 border-purple-200">Beta</Badge>
+            </Link>
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Join the Innovation Network</h1>
           <p className="text-xl text-gray-600 mb-4">Create your account and start building the future</p>
           <div className="flex items-center justify-center space-x-2">
@@ -185,27 +192,6 @@ const SignUp = () => {
                 </CardContent>
               </Card>
             )}
-
-            <Card className="backdrop-blur-sm bg-white/80 border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="text-center space-y-4">
-                  <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
-                    <div className="flex items-center space-x-2">
-                      <Users className="w-4 h-4" />
-                      <span>15K+ Users</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Star className="w-4 h-4" />
-                      <span>1K+ Projects</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Shield className="w-4 h-4 text-green-600" />
-                    <span className="text-sm text-gray-600">SOC 2 Compliant</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Sign up form */}

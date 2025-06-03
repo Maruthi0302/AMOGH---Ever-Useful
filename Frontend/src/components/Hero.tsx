@@ -13,7 +13,7 @@ export const Hero = () => {
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 animate-pulse">
-            <Sparkles className="w-3 h-3 mr-1" />
+            <Sparkles className="w-12 h-14 mr-1" />
             AMOGH - Ever Useful Platform
           </Badge>
           

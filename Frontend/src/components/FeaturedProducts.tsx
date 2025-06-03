@@ -45,11 +45,11 @@ export const FeaturedProducts = () => {
   ];
 
   return (
-    <section id="featured" className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="featured" className="py-20 z-20 bg-gradient-to-br from-white-50/50 via-blue-50/30 to-purple-50/30 relative overflow-hidden">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-[85vw]">
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white animate-pulse">
-            <Star className="w-3 h-3 mr-1" />
+            <Star className="w-12 h-12 mr-1" />
             Featured Innovations
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -78,7 +78,7 @@ export const FeaturedProducts = () => {
                   className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-500`} />
-                <Badge className="absolute top-4 left-4 bg-white/90 text-gray-800 hover:bg-white">
+                <Badge className="absolute h-6 w-30 text-sm top-4 left-4 items-center bg-white/90 text-gray-800 hover:bg-white">
                   {project.category}
                 </Badge>
               </div>

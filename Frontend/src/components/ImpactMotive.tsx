@@ -63,12 +63,12 @@ export const ImpactMotive = () => {
   ];
 
   return (
-    <section id="impact" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="impact" className="relative py-20 bg-gradient-to-br from-gray-50/50 via-white to-blue-50/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[80vw]">
         {/* Impact Section */}
         <div className="text-center mb-16 animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-green-600 to-blue-600 text-white animate-pulse">
-            <TrendingUp className="w-3 h-3 mr-1" />
+            <TrendingUp className="w-12 h-14 mr-1" />
             Our Impact
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -104,9 +104,9 @@ export const ImpactMotive = () => {
         </div>
 
         {/* Motive Section */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 bg-transparent animate-fade-in">
           <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white animate-pulse">
-            <Heart className="w-3 h-3 mr-1" />
+            <Heart className="w-12 h-14 mr-1" />
             Our Mission
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
